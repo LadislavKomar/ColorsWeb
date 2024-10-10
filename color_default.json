@@ -1,0 +1,32 @@
+{
+  "colors": [
+    {
+      "color": "black",
+      "type": "secondary",
+      "code": {
+        "rgba": [255, 255, 255, 1]
+      }
+    },
+    {
+      "color": "white",
+      "type": "tertiary",
+      "code": {
+        "rgba": [0, 0, 0, 1]
+      }
+    },
+    {
+      "color": "red",
+      "type": "secondary",
+      "code": {
+        "rgba": [255, 0, 0, 1]
+      }
+    },
+    {
+      "color": "blue",
+      "type": "primary",
+      "code": {
+        "rgba": [0, 0, 255, 1]
+      }
+    }
+  ]
+}
