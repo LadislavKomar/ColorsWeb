@@ -8,7 +8,7 @@
   },
   "keywords": ["html", "css"],
   "author": "Ladislav Komar",
-  "license": "",
+  "license": "LGPL-3.0-or-later",
   "devDependencies": {
     "serve": ""
   }
