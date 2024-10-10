@@ -23,6 +23,7 @@
 
     <script src="./table.js"></script>
     <script src="./language.js"></script>
+    <script src="./addColor.js"></script>
 
     <main>
       <div class="container">
@@ -30,6 +31,23 @@
         <h3 class="colorText">Color your world!</h3>
         <br />
         <br />
+        <form action="#" id="myForm">
+          <label for="name">Color name: </label>
+          <input type="text" name="color" placeholder="yellow" />
+          <br /><br />
+          <label for="type">Color type:</label>
+          <input type="radio" name="type" value="primary" checked /> Primary
+          <input type="radio" name="type" value="secondary" /> Secondary
+          <input type="radio" name="type" value="tertiary" /> Tertiary
+          <br /><br />
+          <label for="rgba">Color code: </label>
+          <input type="text" id="code" placeholder="#958DF110" />
+          <br /><br />
+          <br /><br />
+          <button type="button" onclick="addColor()">Add color</button>
+          <br /><br />
+        </form>
+
         <table id="dataTable">
           <thead>
             <tr>
