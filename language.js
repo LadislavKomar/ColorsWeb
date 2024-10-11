@@ -16,6 +16,6 @@ const switchLanguage = (code) => {
   }
 };
 
-document.querySelector("#language").addEventListener("change", function () {
+document.querySelector("#languageId").addEventListener("change", function () {
   switchLanguage(this.value);
 });

@@ -5,20 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-i18n="title"></title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=palette"
+    />
   </head>
   <body>
     <header>
+     <div class="logo">
+    <span class="material-symbols-outlined"> palette </span> 
+      <span class="headerText"> Color your world</span>  
+     </div>
+      <div class="searchInput">
       <input
         type="text"
         id="searchInput"
         onkeyup="tableFilter()"
-        placeholder="Search ..."
+        placeholder="  Search ..."
         title="Type a color"
       />
-      <select id="language" class="language">
+      <div class="language">
+      <select id="languageId">
         <option value="en">🏴󠁧󠁢󠁥󠁮󠁧󠁿 English</option>
         <option value="fr">🇫🇷 Francais</option>
       </select>
+      </div>
     </header>
 
     <script src="./table.js"></script>
@@ -27,12 +38,12 @@
     <script src="./filter.js"></script>
 
     <main>
-      <div class="container">
+      <div class="containerForm">
         <br />
-        <h3 class="colorText">Color your world!</h3>
+        <h3 class="colorText">Add your favourite colors!</h3>
         <br />
         <br />
-        <form action="#" id="myForm">
+        <form action="#" id="addColorForm">
           <label for="name">Color name: </label>
           <input type="text" name="color" placeholder="yellow" />
           <br /><br />
@@ -45,11 +56,12 @@
           <input type="text" id="code" placeholder="#958DF110" />
           <br /><br />
           <br /><br />
-          <button type="button" onclick="addColor()">Add color</button>
+          <button type="button" class="addColorButton" onclick="addColor()">Add color</button>
           <br /><br />
         </form>
-
-        <table id="dataTable">
+      </div>
+      <div class="containerTable">  
+      <table id="dataTable">
           <thead>
             <tr>
               <th><b class="tableName">Name</b></th>
@@ -63,8 +75,8 @@
             <tr id="tableContent"></tr>
           </tbody>
         </table>
-      </div>
-      <br />
+        </div>
+       <br />
     </main>
   </body>
 </html>
