@@ -21,7 +21,7 @@ header {
   vertical-align: center;
 }
 
-.headerText {
+#headerText {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -56,7 +56,7 @@ header {
   margin-right: 20px;
 }
 
-.containerForm {
+#containerForm {
   max-width: 100%;
   margin: 3%;
   padding: 20px;
@@ -90,7 +90,7 @@ table {
   text-align: left;
   background-color: #6ff16f;
   color: black;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 #dataTable tr:nth-child(even) {
@@ -99,13 +99,6 @@ table {
 
 #dataTable tr:nth-child(odd) {
   background-color: #fcffe4;
-}
-
-#noMatch {
-  color: red;
-  margin-top: 2.5rem;
-  margin-left: 17rem;
-  font-size: 20px;
 }
 
 .addColorButton {

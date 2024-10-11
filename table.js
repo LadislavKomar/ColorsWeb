@@ -1,3 +1,4 @@
+// read data from color_default.json and populate it in tableContent
 fetch("./color_default.json")
   .then((response) => response.json())
   .then((data) => {

@@ -1,3 +1,4 @@
+// read default data from json and store it in localStorage
 fetch("./color_default.json")
   .then((response) => response.json())
   .then((data) => {
@@ -5,6 +6,7 @@ fetch("./color_default.json")
     localStorage.setItem("colorData", colorString);
   });
 
+// function to convert hex color code to RGB values and format as json object
 function hexRGB() {
   var inp = document.getElementById("code").value;
   const div = document.createElement("div");
@@ -26,6 +28,7 @@ function hexRGB() {
     : {};
 }
 
+// function for validation if hex color code is valid
 function colorValid() {
   var inp = document.getElementById("code").value;
   let Reg_Exp = /(^#[0-9A-F]{8}$)|(^#[0-9A-F]{6}$)/i;
@@ -33,6 +36,7 @@ function colorValid() {
   return Reg_Exp.test(inp);
 }
 
+// function to clear whole table before read a new json with data from the form
 function clearTable() {
   var table = document.getElementById("dataTable");
   for (var i = 1; i < table.rows.length; i++) {
@@ -46,6 +50,8 @@ function clearTable() {
   }
 }
 
+//function to add new color data to existing json in localStorage and populate it in table
+// before adding to table, color code validity is checked and table content is deleted
 function addColor() {
   if (colorValid() == false) alert("Color code is not valid");
   else {

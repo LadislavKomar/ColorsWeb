@@ -14,7 +14,7 @@
     <header>
      <div class="logo">
     <span class="material-symbols-outlined"> palette </span> 
-      <span class="headerText"> Color your world</span>  
+      <span id="headerText" data-lang="headText"> </span>  
      </div>
       <div class="searchInput">
       <input
@@ -22,41 +22,40 @@
         id="searchInput"
         onkeyup="tableFilter()"
         placeholder="  Search ..."
-        title="Type a color"
-      />
+        />
       <div class="language">
       <select id="languageId">
-        <option value="en">🏴󠁧󠁢󠁥󠁮󠁧󠁿 English</option>
-        <option value="fr">🇫🇷 Francais</option>
+        <option a href="index.html" onclick="changeLanguage('en')">🏴󠁧󠁢󠁥󠁮󠁧󠁿 English</option>
+        <option a href="index.html" onclick="changeLanguage('fr')">🇫🇷 Francais</option>
       </select>
       </div>
     </header>
 
-    <script src="./table.js"></script>
-    <script src="./language.js"></script>
-    <script src="./addColor.js"></script>
-    <script src="./filter.js"></script>
+    <script type="text/javascript" src="./table.js"></script>
+    <script type="text/javascript" src="./multilang.js"></script>
+    <script type="text/javascript" src="./addColor.js"></script>
+    <script type="text/javascript" src="./filter.js"></script>
 
     <main>
-      <div class="containerForm">
+      <div id="containerForm">
         <br />
-        <h3 class="colorText">Add your favourite colors!</h3>
+        <h3 data-lang="formText"></h3>
         <br />
         <br />
         <form action="#" id="addColorForm">
-          <label for="name">Color name: </label>
+          <label for="name" data-lang="colorNameText"> </label>
           <input type="text" name="color" placeholder="yellow" />
           <br /><br />
-          <label for="type">Color type:</label>
-          <input type="radio" name="type" value="primary" checked /> Primary
-          <input type="radio" name="type" value="secondary" /> Secondary
-          <input type="radio" name="type" value="tertiary" /> Tertiary
+          <label for="type" data-lang="colorTypeText"></label>
+          <input type="radio" name="type" value="primary" checked/> <p style="display: inline;" data-lang="colorPrimaryText"></p>
+          <input type="radio" name="type" value="secondary" /> <p style="display: inline;" data-lang="colorSecondaryText"></p>
+          <input type="radio" name="type" value="tertiary" /> <p style="display: inline;" data-lang="colorTertiaryText"></p>
           <br /><br />
-          <label for="rgba">Color code: </label>
+          <label for="rgba" data-lang="colorCodeText"></label>
           <input type="text" id="code" placeholder="#958DF110" />
           <br /><br />
           <br /><br />
-          <button type="button" class="addColorButton" onclick="addColor()">Add color</button>
+          <button type="button" class="addColorButton" id="addColorButton" onclick="addColor()" data-lang="addColorButton"></button>
           <br /><br />
         </form>
       </div>
@@ -64,8 +63,8 @@
       <table id="dataTable">
           <thead>
             <tr>
-              <th><b class="tableName">Name</b></th>
-              <th><b class="tableType">Type</b></th>
+              <th><b data-lang="tableName"></b></th>
+              <th><b data-lang="tableType"></b></th>
               <th><b>R</b></th>
               <th><b>G</b></th>
               <th><b>B</b></th>

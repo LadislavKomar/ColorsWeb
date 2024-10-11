@@ -1,3 +1,4 @@
+// function to filter table based on searchInput string, searching in 1st column
 function tableFilter() {
   var input, filter, table, tr, td, i;
   input = document.getElementById("searchInput");

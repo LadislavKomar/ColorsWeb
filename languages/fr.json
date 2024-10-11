@@ -1,0 +1,14 @@
+{
+    "headText": "Couleur votre monde",
+    "searchText": "Chercher ...",
+    "formText": "Ajoutez votre couleurs préférées!",
+    "colorNameText": "Nom de couleur:",
+    "colorTypeText": "Type de couleur:",
+    "colorPrimaryText": "Primaire",
+    "colorSecondaryText": "Secondaire",
+    "colorTertiaryText": "Tertiarie",
+    "colorCodeText": "Code de couleur:",
+    "addColorButton": "Ajoutez le couleur",
+    "tableName": "Nom",
+    "tableType": "Type"
+}
