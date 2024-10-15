@@ -47,6 +47,12 @@ function checkColorName() {
   return tru;
 }
 
+function changeBoxColor() {
+  var box = document.getElementById("rectangle");
+  var inpColor = document.getElementById("code").value;
+  box.style.background = inpColor;
+}
+
 // function to clear whole table before read a new json with data from the form
 function clearTable() {
   var table = document.getElementById("dataTable");

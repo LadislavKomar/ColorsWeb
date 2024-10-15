@@ -52,12 +52,13 @@
           <input type="radio" name="type" value="tertiary" /> <p style="display: inline;" data-lang="colorTertiaryText"></p>
           <br /><br />
           <label for="rgba" data-lang="colorCodeText"></label>
-          <input type="text" id="code" placeholder="#958DF110" />
-          <br /><br />
-          <br /><br />
+          <input type="text" id="code" oninput="changeBoxColor()" placeholder="#00FF00FF" /> 
+          <div id="rectangle" style="display:inline-block"> Preview  </div>
+          <br /><br /><br />
           <button type="button" class="addColorButton" id="addColorButton" onclick="addColor()" data-lang="addColorButton"></button>
           <br /><br />
-        </form>
+          </form>
+                
       </div>
       <div class="containerTable">  
       <table id="dataTable">

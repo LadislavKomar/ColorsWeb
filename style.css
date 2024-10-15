@@ -62,6 +62,8 @@ header {
   padding: 20px;
   background-color: #f7f19e;
   border-radius: 18px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .containerTable {
@@ -82,15 +84,15 @@ table {
 #dataTable th {
   border: 1px solid #aaa8a8;
   padding: 8px;
+  text-align: center;
+  overflow: auto;
 }
 
 #dataTable th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
   background-color: #6ff16f;
   color: black;
-  overflow: auto;
 }
 
 #dataTable tr:nth-child(even) {
@@ -126,4 +128,15 @@ table {
     rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
     rgba(44, 187, 99, 0.25) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
+}
+
+#rectangle {
+  width: 100px;
+  height: 20px;
+  background: #00ff00ff;
+  border: solid 1px;
+  border-color: #002b04;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
 }
