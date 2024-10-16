@@ -15,4 +15,5 @@ function tableFilter() {
       }
     }
   }
+  localStorage.setItem("filterInput", JSON.stringify(input));
 }

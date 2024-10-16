@@ -1,11 +1,3 @@
-// read default data from json and store it in localStorage
-fetch("./color_default.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const colorString = JSON.stringify(data, null, 2);
-    localStorage.setItem("colorData", colorString);
-  });
-
 // function to convert hex color code to RGB values and format as json object
 function hexRGB() {
   var inp = document.getElementById("code").value;
@@ -67,13 +59,48 @@ function clearTable() {
   }
 }
 
+function populateTable() {
+  const savedColorData = localStorage.getItem("colorData");
+  const colorTable = JSON.parse(savedColorData);
+  //  alert(savedColorData);
+  var tableBody = document.getElementById("tableBody");
+
+  colorTable.colors.forEach(function (item) {
+    var row = document.createElement("tr");
+
+    var colorCell = document.createElement("td");
+    colorCell.textContent = item.color;
+    row.appendChild(colorCell);
+
+    var typeCell = document.createElement("td");
+    typeCell.textContent = item.type;
+    row.appendChild(typeCell);
+
+    var rCell = document.createElement("td");
+    rCell.textContent = item.code.rgba[0];
+    row.appendChild(rCell);
+
+    var gCell = document.createElement("td");
+    gCell.textContent = item.code.rgba[1];
+    row.appendChild(gCell);
+
+    var bCell = document.createElement("td");
+    bCell.textContent = item.code.rgba[2];
+    row.appendChild(bCell);
+
+    tableBody.appendChild(row);
+  });
+}
+
 //function to add new color data to existing json in localStorage and populate it in table
 // before adding to table, color name is checked, color code validity is checked and table content is deleted
 function addColor() {
+  const lang = localStorage.getItem("language");
   if (checkColorName() === 0) {
-    alert("Color name is mandatory!");
+    alertMessage1(lang); //alert("Color name is mandatory!");
   } else {
-    if (colorValid() == false) alert("Color code is not valid");
+    if (colorValid() == false)
+      alertMessage2(lang); //alert("Color code is not valid");
     else {
       clearTable();
 
@@ -95,33 +122,7 @@ function addColor() {
       const colorTableString = JSON.stringify(colorTable, null, 2);
       localStorage.setItem("colorData", colorTableString);
 
-      var tableBody = document.getElementById("tableBody");
-
-      colorTable.colors.forEach(function (item) {
-        var row = document.createElement("tr");
-
-        var colorCell = document.createElement("td");
-        colorCell.textContent = item.color;
-        row.appendChild(colorCell);
-
-        var typeCell = document.createElement("td");
-        typeCell.textContent = item.type;
-        row.appendChild(typeCell);
-
-        var rCell = document.createElement("td");
-        rCell.textContent = item.code.rgba[0];
-        row.appendChild(rCell);
-
-        var gCell = document.createElement("td");
-        gCell.textContent = item.code.rgba[1];
-        row.appendChild(gCell);
-
-        var bCell = document.createElement("td");
-        bCell.textContent = item.code.rgba[2];
-        row.appendChild(bCell);
-
-        tableBody.appendChild(row);
-      });
+      populateTable();
     }
   }
 }

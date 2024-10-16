@@ -8,6 +8,7 @@
         "colorSecondaryText": "Secondary",
         "colorTertiaryText": "Tertiary",
         "colorCodeText": "Color code:",
+        "previewText": "Preview",
         "addColorButton": "Add color",
         "tableName": "Name",
         "tableType": "Type"

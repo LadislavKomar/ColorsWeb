@@ -26,9 +26,47 @@ async function changeLanguage(lang) {
   updateContent(langData);
 }
 
+function alertMessage1(lang) {
+  var message1 = {
+    en: "Color name is mandatory!",
+    fr: "Le nom de la couleur est obligatoire !",
+  };
+  alert(message1[lang]);
+}
+
+function alertMessage2(lang) {
+  var message2 = {
+    en: "Color code is not valid!",
+    fr: "Le code couleur n'est pas valide !",
+  };
+  alert(message2[lang]);
+}
+
+function placeHolderSearch(lang) {
+  //  var input = document.getElementById("searchInput");
+  var placeTextSearch = {
+    en: "  Search ...",
+    fr: "  Cherche ...",
+  };
+  var lang = localStorage.getItem("language");
+  document.getElementById("searchInput").placeholder = placeTextSearch[lang];
+}
+
+function placeHolderColor(lang) {
+  //  var input = document.getElementById("searchInput");
+  var placeTextColor = {
+    en: "*required",
+    fr: "*obligatoire",
+  };
+  var lang = localStorage.getItem("language");
+  document.getElementById("colorNameRecq").placeholder = placeTextColor[lang];
+}
+
 // Call updateContent() on page load
 window.addEventListener("DOMContentLoaded", async () => {
   const userPreferredLanguage = localStorage.getItem("language") || "en";
   const langData = await fetchLanguageData(userPreferredLanguage);
   updateContent(langData);
+  placeHolderSearch(langData);
+  placeHolderColor(langData);
 });
