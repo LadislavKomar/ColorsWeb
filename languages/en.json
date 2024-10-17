@@ -11,7 +11,8 @@
         "previewText": "Preview",
         "addColorButton": "Add color",
         "tableName": "Name",
-        "tableType": "Type"
+        "tableType": "Type",
+        "resetPageButton": "Reset page"
 }
 
 

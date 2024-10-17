@@ -35,6 +35,9 @@ function changeStyle() {
   if (lang === "fr") {
     theme.setAttribute("href", "styles/fr.css");
   }
+  if (lang === null) {
+    theme.setAttribute("href", "styles/en.css");
+  }
 }
 
 function alertMessage1(lang) {
@@ -42,7 +45,7 @@ function alertMessage1(lang) {
     en: "Color name is mandatory!",
     fr: "Le nom de la couleur est obligatoire !",
   };
-  alert(message1[lang]);
+  alert(message1[lang || "en"]);
 }
 
 function alertMessage2(lang) {
@@ -50,26 +53,24 @@ function alertMessage2(lang) {
     en: "Color code is not valid!",
     fr: "Le code couleur n'est pas valide !",
   };
-  alert(message2[lang]);
+  alert(message2[lang || "en"]);
 }
 
-function placeHolderSearch(lang) {
-  //  var input = document.getElementById("searchInput");
+function placeHolderSearch() {
   var placeTextSearch = {
     en: "  Search ...",
     fr: "  Cherche ...",
   };
-  var lang = localStorage.getItem("language");
+  var lang = localStorage.getItem("language") || "en";
   document.getElementById("searchInputId").placeholder = placeTextSearch[lang];
 }
 
-function placeHolderColor(lang) {
-  //  var input = document.getElementById("searchInput");
+function placeHolderColor() {
   var placeTextColor = {
     en: "*required",
     fr: "*obligatoire",
   };
-  var lang = localStorage.getItem("language");
+  var lang = localStorage.getItem("language") || "en";
   document.getElementById("colorNameRecq").placeholder = placeTextColor[lang];
 }
 
@@ -78,7 +79,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   const userPreferredLanguage = localStorage.getItem("language") || "en";
   const langData = await fetchLanguageData(userPreferredLanguage);
   updateContent(langData);
-  placeHolderSearch(langData);
-  placeHolderColor(langData);
+  placeHolderSearch();
+  placeHolderColor();
   changeStyle();
 });

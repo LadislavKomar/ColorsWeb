@@ -11,5 +11,6 @@
     "previewText": "Aperçu",
     "addColorButton": "Ajoutez le couleur",
     "tableName": "Nom",
-    "tableType": "Type"
+    "tableType": "Type",
+    "resetPageButton": "Réinitialiser la page"
 }

@@ -16,12 +16,7 @@
         <span class="material-symbols-outlined"> palette </span>
         <span id="headerText" data-lang="headText"> </span>
       </div>
-      <input
-        type="text"
-        id="searchInputId"
-        onkeyup="tableFilter()"
-        placeholder=""
-      />
+      <input type="text" id="searchInputId" onkeyup="tableFilter()" />
       <div class="language">
         <select id="languageId">
           <option a href="index.html" onclick="changeLanguage('en')">
@@ -37,6 +32,7 @@
     <script type="text/javascript" src="./multilang.js"></script>
     <script type="text/javascript" src="./addColor.js"></script>
     <script type="text/javascript" src="./filter.js"></script>
+    <script type="text/javascript" src="./fuzzy.js"></script>
     <script type="text/javascript" src="./table.js"></script>
 
     <main>
@@ -104,5 +100,12 @@
       </div>
       <br />
     </main>
+    <button
+      type="button"
+      class="resetButton"
+      id="resetButton"
+      onclick="resetPage()"
+      data-lang="resetPageButton"
+    ></button>
   </body>
 </html>

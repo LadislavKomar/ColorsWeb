@@ -19,6 +19,11 @@ function populateTableFirst() {
     });
 }
 
+function resetPage() {
+  localStorage.clear();
+  location.reload();
+}
+
 window.addEventListener("load", function () {
   const loadCount = localStorage.getItem("pageLoadCount");
   // read data from color_default.json and populate it in tableContent on first page load

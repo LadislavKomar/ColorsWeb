@@ -140,3 +140,10 @@ table {
   text-align: center;
   vertical-align: middle;
 }
+#resetButton {
+  width: 80px;
+  height: 30px;
+  background: rgb(255, 0, 0);
+  float: right;
+  margin-right: 20px;
+}
