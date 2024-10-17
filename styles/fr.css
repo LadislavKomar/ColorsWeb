@@ -1,7 +1,7 @@
-/* style.css */
+/* style fr.css */
 body {
   font-family: Arial, sans-serif;
-  background-color: #002b04;
+  background-color: #6d7500;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -60,7 +60,7 @@ header {
   max-width: 100%;
   margin: 3%;
   padding: 20px;
-  background-color: #f7f19e;
+  background-color: #50fa5e;
   border-radius: 18px;
   text-align: center;
   vertical-align: middle;

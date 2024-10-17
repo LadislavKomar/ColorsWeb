@@ -26,6 +26,17 @@ async function changeLanguage(lang) {
   updateContent(langData);
 }
 
+function changeStyle() {
+  var lang = localStorage.getItem("language");
+  var theme = document.getElementById("theme");
+  if (lang === "en") {
+    theme.setAttribute("href", "styles/en.css");
+  }
+  if (lang === "fr") {
+    theme.setAttribute("href", "styles/fr.css");
+  }
+}
+
 function alertMessage1(lang) {
   var message1 = {
     en: "Color name is mandatory!",
@@ -49,7 +60,7 @@ function placeHolderSearch(lang) {
     fr: "  Cherche ...",
   };
   var lang = localStorage.getItem("language");
-  document.getElementById("searchInput").placeholder = placeTextSearch[lang];
+  document.getElementById("searchInputId").placeholder = placeTextSearch[lang];
 }
 
 function placeHolderColor(lang) {
@@ -69,4 +80,5 @@ window.addEventListener("DOMContentLoaded", async () => {
   updateContent(langData);
   placeHolderSearch(langData);
   placeHolderColor(langData);
+  changeStyle();
 });

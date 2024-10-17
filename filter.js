@@ -1,7 +1,7 @@
 // function to filter table based on searchInput string, searching in 1st column
 function tableFilter() {
   var input, filter, table, tr, td, i;
-  input = document.getElementById("searchInput");
+  input = document.getElementById("searchInputId");
   filter = input.value.toUpperCase();
   table = document.getElementById("dataTable");
   tr = table.getElementsByTagName("tr");
@@ -15,5 +15,17 @@ function tableFilter() {
       }
     }
   }
-  localStorage.setItem("filterInput", JSON.stringify(input));
+  var filterString = document.getElementById("searchInputId").value;
+  localStorage.setItem("filterInput", filterString);
+  //  const filterString1 = localStorage.getItem("filterInput");
+  //  alert(filterString1);
+}
+
+function filterLoad() {
+  var filterString = localStorage.getItem("filterInput");
+  if (filterString) {
+    document.getElementById("searchInputId").value = filterString;
+    tableFilter();
+    //  alert(filterString);
+  }
 }
