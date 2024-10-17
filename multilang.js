@@ -21,11 +21,11 @@ async function fetchLanguageData(lang) {
 // Function to change language
 async function changeLanguage(lang) {
   await setLanguagePreference(lang);
-
   const langData = await fetchLanguageData(lang);
   updateContent(langData);
 }
 
+// function to change style for each language
 function changeStyle() {
   var lang = localStorage.getItem("language");
   var theme = document.getElementById("theme");
@@ -40,6 +40,7 @@ function changeStyle() {
   }
 }
 
+// alert message 1 translation
 function alertMessage1(lang) {
   var message1 = {
     en: "Color name is mandatory!",
@@ -48,6 +49,7 @@ function alertMessage1(lang) {
   alert(message1[lang || "en"]);
 }
 
+// alert message 2 translation
 function alertMessage2(lang) {
   var message2 = {
     en: "Color code is not valid!",
@@ -56,6 +58,7 @@ function alertMessage2(lang) {
   alert(message2[lang || "en"]);
 }
 
+//placeholder 1 translation
 function placeHolderSearch() {
   var placeTextSearch = {
     en: "  Search ...",
@@ -65,6 +68,7 @@ function placeHolderSearch() {
   document.getElementById("searchInputId").placeholder = placeTextSearch[lang];
 }
 
+//placeholder 2 translation
 function placeHolderColor() {
   var placeTextColor = {
     en: "*required",
