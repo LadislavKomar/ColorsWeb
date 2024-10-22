@@ -21,6 +21,7 @@ function populateTableFirst() {
 
 function resetPage() {
   localStorage.clear();
+  document.getElementById("searchInputId").value = "";
   location.reload();
 }
 
