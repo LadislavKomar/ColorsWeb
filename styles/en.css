@@ -49,12 +49,28 @@ header {
   background: #ffffff;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin-top: 0px;
+  margin-left: 35%;
+  width: 25%;
+}
+
+li {
+  height: 20px;
+  background: #ffffff;
+}
+
+li:hover {
+  background-color: #d2d4d6;
+}
+
 .language {
-  width: auto;
+  width: 12%;
   height: 2em;
-  vertical-align: middle;
   float: right;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 #containerForm {

@@ -1,4 +1,4 @@
-const colorNames = [
+[
 "Abbey",
 "Absolute Zero",
 "Acadia",
@@ -2330,4 +2330,4 @@ const colorNames = [
 "Zorba",
 "Zuccini",
 "Zumthor"
-];
+]
